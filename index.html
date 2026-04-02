@@ -3,63 +3,66 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Eraj Style | Premium Barbershop</title>
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;1,700&family=Montserrat:wght@300;400;600&display=swap" rel="stylesheet">
+    <title>Eraj Style | Barber Shop Thessaloniki</title>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Montserrat:wght@300;400;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-    <nav>
-        <div class="logo">ERAJ STYLE</div>
-        <ul>
-            <li><a href="#about">About</a></li>
-            <li><a href="#services">Services</a></li>
-            <li><a href="#contact">Contact</a></li>
-        </ul>
-    </nav>
+    <header>
+        <nav>
+            <div class="nav-links">
+                <a href="#home">HOME</a>
+                <a href="#services">PRICELIST</a>
+            </div>
+            <div class="logo">ERAJ STYLE</div>
+            <div class="nav-links">
+                <a href="#about">ABOUT US</a>
+                <a href="#contact">LOCATION</a>
+            </div>
+        </nav>
+    </header>
 
-    <header class="hero">
-        <div class="hero-content">
-            <p class="subtitle">EST. 2024</p>
+    <section id="home" class="hero">
+        <div class="hero-overlay">
+            <p class="est">THE ART OF GROOMING</p>
             <h1>ERAJ STYLE</h1>
-            <p class="tagline">Where Tradition Meets Modern Style</p>
-            <a href="#contact" class="btn">BOOK AN APPOINTMENT</a>
+            <p class="hero-tagline">GRIGORIOU KOLONIARI 51, THESSALONIKI</p>
+            <a href="tel:+302310511111" class="gold-btn">CALL TO BOOK</a>
+        </div>
+    </section>
+
+    <section id="services" class="services-section">
+        <h2 class="section-title">SERVICES & PRICES</h2>
+        <div class="price-list">
+            <div class="price-item"><span>HAIRCUT</span><span class="dots"></span><span>€12</span></div>
+            <div class="price-item"><span>BEARD TRIM</span><span class="dots"></span><span>€8</span></div>
+            <div class="price-item"><span>HAIRCUT & BEARD</span><span class="dots"></span><span>€18</span></div>
+            <div class="price-item"><span>TRADITIONAL SHAVE</span><span class="dots"></span><span>€10</span></div>
+            <div class="price-item"><span>KIDS CUT</span><span class="dots"></span><span>€10</span></div>
         </div>
     </header>
 
-    <section id="about">
-        <div class="container">
-            <h2>Our Story</h2>
-            <p>At Eraj Style, we believe every haircut is a new story. We combine timeless traditions with modern trends to give you a unique grooming experience that reflects your personal style.</p>
-        </div>
-    </section>
-
-    <section id="services">
-        <h2>Premium Services</h2>
-        <div class="service-grid">
-            <div class="service-item">
-                <h3>HAIRCUT</h3>
-                <p>$30</p>
-            </div>
-            <div class="service-item">
-                <h3>HAIRCUT & BEARD</h3>
-                <p>$45</p>
-            </div>
-            <div class="service-item">
-                <h3>TRADITIONAL SHAVE</h3>
-                <p>$25</p>
+    <section id="contact" class="location-section">
+        <div class="location-container">
+            <h2 class="gold-text">VISIT US</h2>
+            <p class="address">Grigoriou Koloniari 51, Thessaloniki 546 27, Greece</p>
+            <p class="phone">Phone: <strong>+30 231 051 1111</strong></p>
+            
+            <div class="map-box">
+                <a href="https://www.google.com/maps/search/?api=1&query=Eraj+Style+Thessaloniki" target="_blank" class="gold-btn">OPEN IN GOOGLE MAPS</a>
             </div>
         </div>
     </section>
 
-    <footer id="contact">
-        <div class="logo">ERAJ STYLE</div>
-        <p>123 Barber Street, Your City, 54632</p>
-        <p>Phone: (555) 000-0000</p>
-        <div class="social-links">
-            <p>FOLLOW US ON INSTAGRAM</p>
+    <footer>
+        <div class="footer-content">
+            <div class="footer-logo">ERAJ STYLE</div>
+            <div class="socials">
+                <a href="#">INSTAGRAM</a> / <a href="#">FACEBOOK</a>
+            </div>
+            <p class="copy">© 2026 Eraj Style Barbershop. All Rights Reserved.</p>
         </div>
-        <p class="copyright">© 2026 Eraj Style Barbershop. All Rights Reserved.</p>
     </footer>
 
 </body>
