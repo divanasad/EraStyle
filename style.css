@@ -1,70 +1,54 @@
-/* Color Palette */
 :root {
-    --gold: #d4af37;
-    --dark-bg: #0a0a0a;
-    --card-bg: #161616;
-    --text-white: #ffffff;
-    --text-gray: #a0a0a0;
+    --gold: #c5a059;
+    --dark: #0a0a0a;
+    --grey: #151515;
+    --white: #ffffff;
 }
 
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
+* { margin: 0; padding: 0; box-sizing: border-box; }
 
 body {
-    background-color: var(--dark-bg);
-    color: var(--text-white);
+    background-color: var(--dark);
+    color: var(--white);
     font-family: 'Montserrat', sans-serif;
     line-height: 1.6;
 }
 
-h1, h2, h3, .logo {
-    font-family: 'Playfair Display', serif;
-    text-transform: uppercase;
-    letter-spacing: 2px;
+header {
+    position: fixed;
+    width: 100%;
+    z-index: 1000;
+    background: rgba(0,0,0,0.9);
+    padding: 15px 0;
+    border-bottom: 1px solid #222;
 }
 
-/* Navigation */
 nav {
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
-    padding: 30px 8%;
-    position: absolute;
-    width: 100%;
-    z-index: 10;
+    gap: 40px;
+}
+
+.nav-links a {
+    color: var(--white);
+    text-decoration: none;
+    font-size: 0.7rem;
+    letter-spacing: 2px;
+    font-weight: 600;
 }
 
 .logo {
+    font-family: 'Playfair Display', serif;
     font-size: 1.8rem;
     color: var(--gold);
     font-weight: bold;
+    letter-spacing: 3px;
 }
 
-nav ul {
-    display: flex;
-    list-style: none;
-}
-
-nav ul li {
-    margin-left: 30px;
-}
-
-nav ul li a {
-    color: var(--text-white);
-    text-decoration: none;
-    font-size: 0.8rem;
-    font-weight: 600;
-    letter-spacing: 1px;
-}
-
-/* Hero Section */
 .hero {
     height: 100vh;
-    background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), 
-                url('hero-bg.jpg'); /* Make sure you upload an image with this name! */
+    background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('hero.jpg');
     background-size: cover;
     background-position: center;
     display: flex;
@@ -73,96 +57,54 @@ nav ul li a {
     text-align: center;
 }
 
-.subtitle {
-    color: var(--gold);
-    letter-spacing: 5px;
-    margin-bottom: 10px;
-}
-
 .hero h1 {
-    font-size: 5rem;
-    margin-bottom: 20px;
+    font-family: 'Playfair Display', serif;
+    font-size: 4.5rem;
+    color: white;
+    margin: 10px 0;
 }
 
-.tagline {
-    font-size: 1.2rem;
-    font-style: italic;
-    color: var(--text-gray);
-}
-
-.btn {
+.gold-btn {
     display: inline-block;
-    margin-top: 40px;
-    padding: 15px 45px;
+    padding: 14px 35px;
     border: 1px solid var(--gold);
     color: var(--gold);
     text-decoration: none;
-    font-weight: bold;
+    letter-spacing: 2px;
+    font-size: 0.8rem;
+    margin-top: 20px;
     transition: 0.4s;
 }
 
-.btn:hover {
-    background-color: var(--gold);
-    color: black;
+.gold-btn:hover { background: var(--gold); color: black; }
+
+.services-section { padding: 100px 10%; text-align: center; background: var(--grey); }
+
+.price-list { max-width: 600px; margin: 40px auto; }
+
+.price-item {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 25px;
+    font-size: 1.1rem;
 }
 
-/* Services */
-#services {
-    padding: 100px 10%;
-    text-align: center;
-}
+.dots { flex: 1; border-bottom: 1px dotted #444; margin: 0 10px; position: relative; bottom: 5px; }
 
-#services h2 {
-    font-size: 2.5rem;
-    margin-bottom: 50px;
-}
+.location-section { padding: 100px 10%; text-align: center; }
 
-.service-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: 30px;
-}
+.address, .phone { font-size: 1.2rem; margin: 10px 0; color: #ccc; }
 
-.service-item {
-    background-color: var(--card-bg);
-    padding: 50px;
-    border: 1px solid #222;
-    transition: 0.3s;
-}
-
-.service-item:hover {
-    border-color: var(--gold);
-}
-
-.service-item h3 {
-    color: var(--gold);
-    margin-bottom: 15px;
-}
-
-.service-item p {
-    font-size: 1.5rem;
-    font-weight: bold;
-}
-
-/* Footer */
 footer {
-    background-color: #000;
-    padding: 80px 10%;
+    padding: 60px 10%;
     text-align: center;
+    background: #000;
     border-top: 1px solid #222;
 }
 
-footer .logo {
-    margin-bottom: 20px;
-}
+.footer-logo { font-family: 'Playfair Display', serif; color: var(--gold); margin-bottom: 20px; font-size: 1.4rem; }
 
-footer p {
-    color: var(--text-gray);
-    margin-bottom: 10px;
-}
-
-.copyright {
-    margin-top: 40px;
-    font-size: 0.7rem;
-    opacity: 0.5;
+@media (max-width: 768px) {
+    nav { flex-direction: column; gap: 10px; }
+    .hero h1 { font-size: 2.5rem; }
 }
