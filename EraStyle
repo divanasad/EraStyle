@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eraj Style | Modern Barbershop</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Roboto:wght@300;400&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <nav>
+        <div class="logo">ERAJ STYLE</div>
+        <ul>
+            <li><a href="#about">About</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+
+    <header class="hero">
+        <div class="hero-content">
+            <h1>ERAJ STYLE</h1>
+            <p>Precision. Style. Tradition.</p>
+            <a href="#contact" class="btn">Book Appointment</a>
+        </div>
+    </header>
+
+    <section id="services">
+        <h2>Our Services</h2>
+        <div class="service-grid">
+            <div class="service-item">
+                <h3>Classic Haircut</h3>
+                <p>$30</p>
+            </div>
+            <div class="service-item">
+                <h3>Beard Grooming</h3>
+                <p>$20</p>
+            </div>
+            <div class="service-item">
+                <h3>The Full Treatment</h3>
+                <p>$45</p>
+            </div>
+        </div>
+    </section>
+
+    <footer id="contact">
+        <p>Visit us: 123 Barber Lane, Your City</p>
+        <p>Call: (555) 123-4567</p>
+        <div class="socials">
+            <p>Follow us on Instagram @ErajStyle</p>
+        </div>
+    </footer>
+
+</body>
+</html>
