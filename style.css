@@ -1,14 +1,28 @@
-/* General Styles */
-body {
+/* Color Palette */
+:root {
+    --gold: #d4af37;
+    --dark-bg: #0a0a0a;
+    --card-bg: #161616;
+    --text-white: #ffffff;
+    --text-gray: #a0a0a0;
+}
+
+* {
     margin: 0;
-    font-family: 'Roboto', sans-serif;
-    background-color: #0a0a0a;
-    color: #ffffff;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--dark-bg);
+    color: var(--text-white);
+    font-family: 'Montserrat', sans-serif;
     line-height: 1.6;
 }
 
-h1, h2, .logo {
+h1, h2, h3, .logo {
     font-family: 'Playfair Display', serif;
+    text-transform: uppercase;
     letter-spacing: 2px;
 }
 
@@ -17,23 +31,40 @@ nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 20px 50px;
-    background: rgba(0,0,0,0.9);
-    position: sticky;
-    top: 0;
-    border-bottom: 1px solid #333;
+    padding: 30px 8%;
+    position: absolute;
+    width: 100%;
+    z-index: 10;
 }
 
-.logo { font-size: 1.5rem; color: #d4af37; /* Gold Color */ }
+.logo {
+    font-size: 1.8rem;
+    color: var(--gold);
+    font-weight: bold;
+}
 
-nav ul { display: flex; list-style: none; }
-nav ul li { margin-left: 20px; }
-nav ul li a { color: white; text-decoration: none; text-transform: uppercase; font-size: 0.8rem; }
+nav ul {
+    display: flex;
+    list-style: none;
+}
+
+nav ul li {
+    margin-left: 30px;
+}
+
+nav ul li a {
+    color: var(--text-white);
+    text-decoration: none;
+    font-size: 0.8rem;
+    font-weight: 600;
+    letter-spacing: 1px;
+}
 
 /* Hero Section */
 .hero {
-    height: 80vh;
-    background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('images/hero-bg.jpg');
+    height: 100vh;
+    background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), 
+                url('hero-bg.jpg'); /* Make sure you upload an image with this name! */
     background-size: cover;
     background-position: center;
     display: flex;
@@ -42,43 +73,96 @@ nav ul li a { color: white; text-decoration: none; text-transform: uppercase; fo
     text-align: center;
 }
 
-.hero h1 { font-size: 4rem; margin-bottom: 10px; }
+.subtitle {
+    color: var(--gold);
+    letter-spacing: 5px;
+    margin-bottom: 10px;
+}
+
+.hero h1 {
+    font-size: 5rem;
+    margin-bottom: 20px;
+}
+
+.tagline {
+    font-size: 1.2rem;
+    font-style: italic;
+    color: var(--text-gray);
+}
 
 .btn {
     display: inline-block;
-    padding: 12px 30px;
-    background: #d4af37;
-    color: black;
+    margin-top: 40px;
+    padding: 15px 45px;
+    border: 1px solid var(--gold);
+    color: var(--gold);
     text-decoration: none;
     font-weight: bold;
-    margin-top: 20px;
-    border-radius: 2px;
+    transition: 0.4s;
+}
+
+.btn:hover {
+    background-color: var(--gold);
+    color: black;
 }
 
 /* Services */
-#services { padding: 80px 20px; text-align: center; }
+#services {
+    padding: 100px 10%;
+    text-align: center;
+}
+
+#services h2 {
+    font-size: 2.5rem;
+    margin-bottom: 50px;
+}
+
 .service-grid {
-    display: flex;
-    justify-content: center;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
     gap: 30px;
-    flex-wrap: wrap;
-    margin-top: 40px;
 }
 
 .service-item {
-    border: 1px solid #333;
-    padding: 30px;
-    width: 250px;
+    background-color: var(--card-bg);
+    padding: 50px;
+    border: 1px solid #222;
     transition: 0.3s;
 }
 
-.service-item:hover { border-color: #d4af37; }
-.service-item h3 { color: #d4af37; }
+.service-item:hover {
+    border-color: var(--gold);
+}
+
+.service-item h3 {
+    color: var(--gold);
+    margin-bottom: 15px;
+}
+
+.service-item p {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
 
 /* Footer */
 footer {
-    padding: 50px;
-    background: #000;
+    background-color: #000;
+    padding: 80px 10%;
     text-align: center;
-    border-top: 1px solid #333;
+    border-top: 1px solid #222;
+}
+
+footer .logo {
+    margin-bottom: 20px;
+}
+
+footer p {
+    color: var(--text-gray);
+    margin-bottom: 10px;
+}
+
+.copyright {
+    margin-top: 40px;
+    font-size: 0.7rem;
+    opacity: 0.5;
 }
